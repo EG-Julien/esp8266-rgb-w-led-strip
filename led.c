@@ -52,7 +52,7 @@ const int led_white_gpio = WHITE_GPIO;
 bool led_white_on = false;
 
 void led_write(bool on) {
-    gpio_write(led_white_gpio, on ? 0 : 1);
+    gpio_write(led_white_gpio, on ? 1 : 0);
 }
 
 static void hsi2rgb(float h, float s, float i, struct Color* rgb) {
