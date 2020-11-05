@@ -51,6 +51,10 @@ bool led_on = INITIAL_ON;
 const int led_white_gpio = WHITE_GPIO;
 bool led_white_on = false;
 
+void led_write(bool on) {
+    gpio_write(led_white_gpio, on ? 0 : 1);
+}
+
 static void hsi2rgb(float h, float s, float i, struct Color* rgb) {
     // Make sure h is between 0 and 360
     while (h < 0) { h += 360.0f; };
@@ -271,10 +275,6 @@ void led_saturation_set(homekit_value_t value) {
     Adding a white strip to the accessory
 
 */
-
-void led_write(bool on) {
-    gpio_write(led_white_gpio, on ? 0 : 1);
-}
 
 void led_white_identify_task(void *_args) {
     for (int i = 0; i < 3; i++)
