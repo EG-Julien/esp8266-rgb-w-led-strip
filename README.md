@@ -1,7 +1,7 @@
 # Purpose of this software
 This software is meant to be flashed on an esp8266, connected with an RGB LED strip and a White LED strip.
 It is able to drive all colors of the strip from 0 to 100% dimmable via multichannel
-pwm. Warning : LED Strip is inverted ! (N-Channel MOSFET used)
+pwm. Warning : White LED Strip command is inverted ! (N-Channel MOSFET used)
 
 ## Homekit integration
 No bridge is required. Instead, this project uses the esp-homekit implementation found
